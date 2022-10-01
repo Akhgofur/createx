@@ -1,0 +1,113 @@
+.header__container {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.6em;
+    line-height: 160%;
+    padding: 20px;
+    position: relative;
+}
+.header__logo-img {
+    display: block;
+}
+.header__checkbox {
+    display: none;
+    &:checked ~ .sitenav {
+        display: block;
+    }
+    &:checked ~ .header__toggler {
+        .toggler__line-top {
+            margin-bottom: 0px;
+            transform: rotate(-45deg);
+        }
+        .toggler__line-center {
+           display: none;
+        }
+        .toggler__line-bottom {
+            margin-top: -2px;
+            transform: rotate(45deg);
+        }
+    }
+}
+.header__toggler {
+    width: 24px;
+    height: 24px;
+    display: none;
+}
+
+.header__nav {
+    margin-right: auto;
+    margin-left: 60px;
+}
+.header__consulation-link {
+    line-height: 52px;
+    padding: 0 40px;
+    background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+    border-radius: 4px;
+    color: #fff;
+    margin-right: 35px;
+}
+.header__login-link {
+    color: #424551;
+    display: flex;
+    align-items: center;
+    &::before {
+        content: url(../img/Person.svg);
+        display: block;
+        margin-right: 8px;
+        width: 18px;
+        margin-top: 5px;
+        
+    }
+
+}
+@include breakpoint-down(1100px) {
+    .header__consulation-link {
+        line-height: 40px;
+        padding: 0 20px;
+    }
+    .header {
+        font-size: 8px;
+    }
+}
+@include breakpoint-down(940px) {
+    .header__consulation-link {
+        line-height: 40px;
+        padding: 0 15px;
+        margin-right: 20px;
+    }
+    .header {
+        font-size: 8px;
+    }
+    .header__nav {
+        margin-left: 30px;
+    }
+    
+}
+@include breakpoint-down(765px) {
+   .header__logo-link {
+    margin-right: auto;
+   }
+   .header__login-link {
+    margin-right: 20px;
+   }
+   .header__toggler {
+    display: block;
+
+   }
+   .header {
+    font-size: 10px;
+   }
+}
+@include breakpoint-down(550px) {
+    .header__login-link {
+        display: none;
+    }
+    .header__consulation-link {
+        display: none;
+    }
+    .header__logo-img {
+        width: 100px;
+        height: 18px;
+    }
+ }

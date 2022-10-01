@@ -1,0 +1,49 @@
+.sitenav__list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.sitenav__item-link {
+    color: #424551;
+}
+.consulation {
+    display: none;
+}
+.login {
+    display: none;
+}
+@include breakpoint-down(1100px) {
+    .sitenav__list {
+        gap: 20px;
+    }
+}
+@include breakpoint-down(800px) {
+    .sitenav__list {
+        gap: 15px;
+    }
+}
+@include breakpoint-down(765px) {
+    .sitenav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #fdddcf;
+        padding: 30px;
+        margin: 0;
+    }
+    .sitenav__list {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+@include breakpoint-down(550px) {
+    .login {
+        display: block;
+    }
+    .consulation {
+        display: block;
+    }
+ }

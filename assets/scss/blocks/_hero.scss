@@ -1,0 +1,148 @@
+.hero__wrapper {
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero {
+    padding-top: 110px;
+    padding-bottom: 80px;
+}
+.hero__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero__content {
+    max-width: 500px;
+    width: 100%;
+    margin-right: 20px; 
+    margin-bottom: 190px;
+}
+.hero__desc {
+    font-weight: 700;
+    font-size: 1.4em;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    &::before {
+        display: block;
+        content: url(../img/hover.svg);
+    }
+}
+.hero__heading {
+    font-weight: 900;
+    font-size: 6.4em;
+    line-height: 130%;
+    margin-bottom: 60px;
+}
+.hero__links {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.6em;
+    line-height: 52px;
+    gap: 24px;
+}
+.hero__about-link {
+    padding: 0 40px;
+    border-radius: 4px;
+    color: #fa511c;
+    background-color: transparent;
+    border: 2px solid #fa511c;
+
+
+}
+.hero__explore-link {
+    padding: 0 40px;
+    background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+    border-radius: 4px;
+    color: #fff ;
+}
+.hero__img {
+}
+.hero__info {
+}
+.hero__info-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.hero__info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.hero__info-item-count {
+    font-weight: 900;
+    font-size: 4.6em;
+    line-height: 130%;
+}
+.hero__ifo-item-title {
+    font-weight: 400;
+    font-size: 1.6em;
+    line-height: 160%;
+}
+@include breakpoint-down(1000px) {
+    .hero__img {
+        width: 400px;
+        height: 380px;
+    }
+    .hero__heading {
+        line-height: 120%;
+        margin-bottom: 40px;
+    }
+}
+@include breakpoint-down(800px) {
+    .hero__img {
+        width: 350px;
+        height: 300px;
+    }
+    .hero__heading {
+        margin-bottom: 25px;
+        font-size: 5em;
+    }
+    .hero__links {
+        line-height: 30px;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 18px;
+    }
+    .hero__about-link {
+        padding: 0 20px;
+    }
+    .hero__explore-link {
+        padding: 0 20px;
+    }
+    .hero__info-list {
+        gap: 8px;
+    }
+}
+@include breakpoint-down(600px) {
+    .hero__heading {
+        font-size: 4em;
+        margin-bottom: 20px;
+    }
+}
+@include breakpoint-down(550px) {
+    .hero {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+    .hero__top {
+        flex-direction: column-reverse;
+        margin-bottom: 50px;
+    }
+    .hero__heading {
+        text-align: center;
+        font-size: 4.8em;
+    }
+    .hero__content {
+        margin: 0;
+    }
+    .hero__info-list {
+        flex-direction: column;
+    }
+}

@@ -9,6 +9,9 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 body {
@@ -18,11 +21,61 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  font-family: "Arial", sans-serif;
+  font-family: 'Lato';
   background-color: #fff;
+  font-size: 10px;
+  color: #1E212C;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+@include breakpoint-down(1100px) {
+  body {
+    font-size: 8px;
+  }
+}
+@include breakpoint-down(800px) {
+  body {
+    font-size: 6px;
+  }
+}
+
+.primary-link {
+  font-weight: 700;
+  font-size: 1.4em;
+  line-height: 44px;
+  padding: 0 40px;
+  background-color: #f95514;
+  color: #fff;
+  border-radius: 4px;
+  display: inline-block;
+}
+.secondary-link {
+  font-weight: 700;
+  font-size: 1.4em;
+  line-height: 44px;
+  padding: 0 40px;
+  background-color: transparent;
+  border: 2px solid #f95514;
+  color: #f95514;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+@include breakpoint-down(600px) {
+  .secondary-link {
+    padding: 0 20px;
+    line-height: 22px;
+  }
+  .primary-link {
+    padding: 0 20px;
+    line-height: 22px;
+  }
 }
